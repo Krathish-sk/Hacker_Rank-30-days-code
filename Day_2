@@ -1,0 +1,19 @@
+import java.util.Scanner;
+import java.lang.Math;
+class Solution
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        float cost = in.nextFloat();
+        int tip = in.nextInt();
+        int tax = in.nextInt();
+        
+        float ftip = (tip * cost ) / 100;
+        float ftax = (tax * cost ) / 100;
+        float total = ftip + ftax + cost ;
+        int round = (int)Math.round(total);
+        System.out.print(round);
+        in.close();
+    }
+}
